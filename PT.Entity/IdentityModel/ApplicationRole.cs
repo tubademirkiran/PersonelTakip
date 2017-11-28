@@ -10,7 +10,7 @@ namespace PT.Entity.IdentityModel
 {
     public class ApplicationRole:IdentityRole
     {
-        [StringLength(25)]
+        [StringLength(55)]
         public string Description { get; set; }
     }
 }

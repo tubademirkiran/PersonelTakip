@@ -15,10 +15,11 @@ namespace PT.Entity.IdentityModel
         [StringLength(25)]
         public string Name { get; set; }
         public string Surname { get; set; }
-        [Column(TypeName ="smalldatetime")]
-        public DateTime RegisterDate { get; set; } //kayıt olduğu tarih
+        [Column(TypeName = "smalldatetime")]
+        public DateTime RegisterDate { get; set; } = DateTime.Now; //kayıt olduğu tarih
         public decimal Salary { get; set; }
-        public int DepartmentId { get; set; }
+        public int? DepartmentId { get; set; }
+        public string ActivationCode { get; set; }
         [ForeignKey("DepartmentId")]
         public virtual Department Department { get; set; } //kullanıcını bir department i olur
         public virtual List<LaborLog> LaborLogs { get; set; } = new List<LaborLog>();
