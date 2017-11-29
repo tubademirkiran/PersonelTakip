@@ -17,6 +17,11 @@ namespace PT.DAL
         {
 
         }
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            this.RequireUniqueEmail = true;
+        }
         public virtual DbSet<Department> Departments { get; set; }
         public virtual DbSet<LaborLog> LaberLogs { get; set; }
         public virtual DbSet<SalaryLog> SalaryLogs { get; set; }

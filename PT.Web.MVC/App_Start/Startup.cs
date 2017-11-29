@@ -23,3 +23,4 @@ namespace PT.Web.MVC.App_Start
 }
 //startup uygulama çalışmadan önce araya girer
 //uygulamanın arka planında cookie tutar ve işlemlerde giriş ister
+//program boyunca  Authentication dan geçemeyen tüm işlemleri login e yönlendirir

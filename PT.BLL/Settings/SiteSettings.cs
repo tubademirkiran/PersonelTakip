@@ -24,6 +24,10 @@ namespace PT.BLL.Settings
                 var message = new MailMessage();
                 message.To.Add(new MailAddress(model.To)); //kime gidecek
                 message.From = new MailAddress(SiteMail); //kimden gidecek
+                if(!string.IsNullOrEmpty(model.Bcc))
+                message.Bcc.Add(new MailAddress(model.Bcc));
+                if (!string.IsNullOrEmpty(model.Cc))
+                    message.CC.Add(new MailAddress(model.Cc));
                 message.Subject = model.Subject; //konu
                 message.IsBodyHtml = true; //html kullanılsın
                 message.Body = model.Message; 
